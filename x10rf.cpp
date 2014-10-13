@@ -18,7 +18,16 @@ Tested on a TI Stellarpad (LM4F120H5QR) and Energia 0101E0010. This should also 
 #elif defined(ENERGIA) // LaunchPad, FraunchPad and StellarPad specific
   #include "Energia.h"
 #else
-  #include "WProgram.h"
+  #include <wiringPi.h>
+  #include <stdint.h>
+  #include <ctype.h>
+  #include "binary.h"
+
+  #define bitRead(value, bit) (((value) >> (bit)) & 0x01)
+  #define bitSet(value, bit) ((value) |= (1UL << (bit)))
+  #define bitClear(value, bit) ((value) &= ~(1UL << (bit)))
+  #define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
+
 #endif
 
 #include "x10rf.h"

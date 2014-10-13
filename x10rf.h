@@ -27,7 +27,8 @@ Tested on a TI Stellarpad (LM4F120H5QR) and Energia 0101E0010. This should also 
 #elif defined(ENERGIA) // LaunchPad, FraunchPad and StellarPad specific
   #include "Energia.h"
 #else
-  #include "WProgram.h"
+  #include <wiringPi.h>
+  #include <stdint.h>
 #endif
 
 class x10rf
