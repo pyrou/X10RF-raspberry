@@ -1,7 +1,7 @@
 X10RF-raspberry
 ===============
 
-X10RF-raspberry is for controlling 433(.92)Mhz X10 receiver with the raspberry pi. This code is based on a fork of [p2baron/x10rf](http://github.com/pyrou/x10rf) initially created for Energia, then ported to Arduino plateform.
+X10RF-raspberry is for controlling 433(.92)Mhz X10 receiver with the Raspberry pi. This code is based on a fork of [p2baron/x10rf](http://github.com/pyrou/x10rf) initially created for Energia, then ported to Arduino plateform.
 
 
 ### Dependencies
@@ -24,5 +24,5 @@ You may want to change the used GPIO pin before compilation in the send.cpp sour
 git clone git@github.com:pyrou/X10RF-raspberry.git
 cd X10RF-raspberry
 make
-sudo send B 10 ON
+sudo ./send B 10 ON
 ```
